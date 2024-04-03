@@ -1,0 +1,36 @@
+.container {
+  width: 350px;
+  height: auto;
+  background-color: #795f4c7d;
+  text-align: left;
+  padding: 2px 5px;
+  margin: 5px;
+  position: relative;
+}
+
+.heading {
+  margin: 5px;
+}
+
+.text {
+  margin: 5px;
+  font-size: 0.8em;
+}
+
+.btn {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  position: absolute;
+  right: 5px;
+  top: 2px;
+}
+
+.img {
+  width: 10px;
+  height: 10px;
+}
+
+.btn:hover {
+  background-color: #62514c;
+}
