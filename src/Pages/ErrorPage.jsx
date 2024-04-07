@@ -1,4 +1,5 @@
 import classes from "../styles/ErrorPage.module.css";
+
 const ErrorPage = () => {
   return (
     <div className={classes.container}>

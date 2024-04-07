@@ -4,10 +4,10 @@ const Footer = () => {
   return (
     <div className={classes.container}>
       <a
-        href="https://github.com/fabioniglio/Kanban-Board-app"
+        href="https://github.com/jinishakheni/Task-Planner"
         className={classes.link}
       >
-        GitHub
+        GitHub Repository
       </a>
     </div>
   );
