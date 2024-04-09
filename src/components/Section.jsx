@@ -39,6 +39,8 @@ const Section = ({ status, kanbanDataList, handleKanbanDataList }) => {
       assignee: "",
       status: status,
       priority: "High",
+      dueDate: "",
+      createdDate: new Date().toISOString().split("T")[0],
     });
     toggleShowCardDetail();
   };
@@ -56,19 +58,23 @@ const Section = ({ status, kanbanDataList, handleKanbanDataList }) => {
   return (
     <div className={classes.container}>
       <h3>{status}</h3>
-      {dataList.map((currentCardData) => {
-        return (
-          <Card
-            key={currentCardData.id}
-            cardData={currentCardData}
-            onClickHandler={() => handleCardClick(currentCardData)}
-            onDelete={() => deleteCard(currentCardData)}
-          />
-        );
-      })}
-      <button type="button" className={classes.btn} onClick={newCardHandler}>
-        +
-      </button>
+      <div className={classes.cardsAndButtonContainer}>
+        {dataList.map((currentCardData) => {
+          return (
+            <Card
+              key={currentCardData.id}
+              cardData={currentCardData}
+              onClickHandler={() => handleCardClick(currentCardData)}
+              onDelete={() => deleteCard(currentCardData)}
+            />
+          );
+        })}
+
+        <button type="button" className={classes.btn} onClick={newCardHandler}>
+          +
+        </button>
+      </div>
+
       {showCardDetail && (
         <CardDetail
           cardDetailMode={cardDetailMode}
